@@ -23,26 +23,27 @@ export default class Counter extends Component {
     );
   }
 
-  handleIncrement = () => {
+  handleIncrement = product => {
+    console.log("This is a product increment event: ", product);
     this.setState({ count: this.state.count + 1 });
   };
 
   render() {
     return (
-      <React.Fragment>
+      <div>
         {/* <img src={this.state.imageUrl} alt="picsum" /> */}
         <span style={{ fontSize: 20 }} className={this.getBadgeClasses()}>
           {this.formatCount()}
         </span>
         <button
-          onClick={this.handleIncrement}
+          onClick={() => this.handleIncrement({ id: 1 })}
           className="btn btn-secondary btn-sm"
         >
           Increment
         </button>
         {this.state.tags.length === 0 && "Please create a new tag!"}
         {this.renderTags()}
-      </React.Fragment>
+      </div>
     );
   }
 

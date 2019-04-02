@@ -23,8 +23,7 @@ export default class Counter extends Component {
     );
   }
 
-  handleIncrement = product => {
-    console.log("This is a product increment event: ", product);
+  handleIncrement = () => {
     this.setState({ value: this.state.value + 1 });
   };
 
@@ -33,13 +32,12 @@ export default class Counter extends Component {
 
     return (
       <div>
-        {this.props.children}
         {/* <img src={this.state.imageUrl} alt="picsum" /> */}
         <span style={{ fontSize: 20 }} className={this.getBadgeClasses()}>
           {this.formatCount()}
         </span>
         <button
-          onClick={() => this.handleIncrement({ id: 1 })}
+          onClick={this.handleIncrement}
           className="btn btn-secondary btn-sm"
         >
           Increment

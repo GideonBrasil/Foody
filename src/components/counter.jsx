@@ -24,6 +24,7 @@ export default class Counter extends Component {
   }
 
   handleIncrement = () => {
+    this.props.value = 0;
     this.setState({ value: this.state.value + 1 });
   };
 

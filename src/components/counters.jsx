@@ -24,11 +24,12 @@ class Counters extends Component {
     this.setState({ counters });
   };
 
-  handleIncrement = () => {
+  handleIncrement = counter => {
     const counters = [...this.state.counters];
-    counters[0] = { ...counters };
-    counters[0].value++;
-    console.log("counters:", this.state.counters[0]);
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter };
+    counters[index].value++;
+    this.setState({ counters });
   };
 
   render() {

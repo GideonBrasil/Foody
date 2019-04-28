@@ -1,12 +1,6 @@
 import React, { Component } from "react";
 
 export default class Counter extends Component {
-  state = {
-    value: this.props.counter.value,
-    tags: ["tag1", "tag2", "tag3"]
-    // imageUrl: "https://picsum.photos/200"
-  };
-
   //   constructor() {
   //     super();
   //     this.handleIncrement = this.handleIncrement.bind(this);

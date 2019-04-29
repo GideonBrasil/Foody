@@ -16,7 +16,11 @@ class App extends Component {
   constructor(props) {
     super(props);
     console.log("App - Constructor", this.props);
-    // this.state = this.props.something;
+  }
+
+  componentDidMount() {
+    // Ajax call
+    console.log("App - Mounted");
   }
 
   handleReset = () => {
@@ -41,6 +45,8 @@ class App extends Component {
   };
 
   render() {
+    console.log("App - Rendered");
+
     return (
       <React.Fragment>
         <NavBar

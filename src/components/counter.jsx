@@ -6,6 +6,10 @@ export default class Counter extends Component {
     console.log("prevState:", prevState);
   }
 
+  componentWillUnmount() {
+    console.log("Counter - UnMounted");
+  }
+
   render() {
     console.log("Counter - Rendered");
     return (
